@@ -1,0 +1,124 @@
+:root {
+  --white: #ffffff; 
+  --blue: #01c2cb; 
+  --dark: #000000;
+  --light: #00f7ff70;
+  --radius: 0.3rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  color: var(--dark);
+  background-color: var(--white);
+}
+
+.navbar {
+  position: fixed;
+  display: flex; 
+  z-index: 1000;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(0.75rem, 1vh + 0.25rem, 1rem) clamp(1.5rem, 4vw, 5rem);
+  width: 100%;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-size: clamp(1.2rem, 1rem + 1vw, 1.5rem);
+  font-weight: 600;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: clamp(2rem, 3vw, 3rem);
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 500;
+  font-size: clamp(0.875rem, 0.8rem + 0.5vw, 1rem);
+}
+
+.nav-links .cta {
+  background-color: var(--white);
+  color: var(--blue);
+  padding: clamp(0.5rem, 0.8vh, 0.75rem) clamp(1rem, 2vw, 1.5rem);
+  border-radius: var(--radius);
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.hero {
+  background-color: var(--light);
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  color: var(--white);
+  text-align: left;
+  max-width: 500px;
+  z-index: 1; 
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+.btn-primary {
+  background-color: var(--blue);
+  color: var(--white);
+  border: none;
+  padding: clamp(0.75rem, 1vh, 1rem) clamp(1.5rem, 4vw, 2.5rem);
+  border-radius: var(--radius);
+  font-size: clamp(0.875rem, 0.8rem + 0.5vw, 1.25rem);
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  margin: 2rem 0;
+}
+
+.hamburger {
+  display: none;
+}
